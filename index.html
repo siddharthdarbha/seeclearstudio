@@ -47,18 +47,9 @@
     border-bottom: 1px solid rgba(26,24,20,0.08);
   }
 
-  .nav-logo {
-    display: flex;
-    align-items: center;
-  }
+  .nav-logo { display: flex; align-items: center; }
 
-  /* Logo: the image is black on white JPEG. We use mix-blend-mode to make white transparent */
-  .nav-logo img {
-    height: 36px;
-    width: auto;
-    display: block;
-    mix-blend-mode: multiply;
-  }
+  .nav-logo svg { height: 36px; width: auto; display: block; }
 
   .nav-links {
     display: flex;
@@ -136,10 +127,7 @@
     letter-spacing: -0.02em;
   }
 
-  .hero h1 em {
-    font-style: italic;
-    color: var(--olive);
-  }
+  .hero h1 em { font-style: italic; color: var(--olive); }
 
   .hero-sub {
     font-size: 1.05rem;
@@ -213,7 +201,7 @@
     width: 7px; height: 7px;
     border-radius: 50%;
     flex-shrink: 0;
-    margin-top: 0.4rem;
+    margin-top: 0.42rem;
   }
 
   .card-dot.olive { background: var(--olive); }
@@ -235,16 +223,13 @@
     line-height: 1.5;
   }
 
-  /* DIVIDER */
   .divider {
     height: 1px;
     background: linear-gradient(to right, transparent, var(--cream-dark), transparent);
     margin: 0 4rem;
   }
 
-  /* SECTIONS */
   section { padding: 6.5rem 4rem; }
-
   .section-inner { max-width: 1100px; margin: 0 auto; }
 
   .section-label {
@@ -306,13 +291,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
+    padding: 3.5rem;
   }
 
-  .about-blob img {
-    width: 72%;
-    mix-blend-mode: multiply;
-  }
+  .about-blob svg { width: 100%; }
 
   .about-stats {
     display: grid;
@@ -384,11 +366,7 @@
   .service-card:nth-child(2)::before { background: linear-gradient(to right, var(--teal), var(--teal-light)); }
   .service-card:nth-child(3)::before { background: linear-gradient(to right, var(--blush), #d4886a); }
 
-  .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 60px rgba(26,24,20,0.08);
-  }
-
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(26,24,20,0.08); }
   .service-card:hover::before { transform: scaleX(1); }
 
   .service-num {
@@ -436,6 +414,113 @@
   .tag.teal { background: var(--teal-pale); color: var(--teal); border-color: rgba(30,107,102,0.18); }
   .tag.blush { background: var(--blush-pale); color: var(--blush); border-color: rgba(184,104,72,0.18); }
 
+  /* WHO WE WORK WITH */
+  .who { background: #fff; }
+
+  .who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3.5rem;
+  }
+
+  .who-col-title {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+
+  .who-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .who-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem 1.4rem;
+    background: var(--cream);
+    border-radius: 12px;
+    border: 1px solid var(--cream-dark);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .who-item:hover { border-color: var(--olive-pale); transform: translateX(4px); }
+
+  .who-item-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  .who-item-icon.olive { background: var(--olive-pale); }
+  .who-item-icon.teal { background: var(--teal-pale); }
+  .who-item-icon.blush { background: var(--blush-pale); }
+
+  .who-item-text strong {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 0.18rem;
+  }
+
+  .who-item-text span {
+    font-size: 0.8rem;
+    color: var(--stone);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .what-tags-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .what-group-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--stone);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+
+  .what-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .what-tag {
+    font-size: 0.82rem;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-weight: 300;
+    border: 1px solid var(--cream-dark);
+    background: var(--cream);
+    color: var(--mid);
+    transition: all 0.2s;
+  }
+
+  .what-tag:hover { background: var(--olive-pale); border-color: var(--olive-pale); color: var(--olive); }
+
+  .what-tag.ai { background: var(--teal-pale); border-color: rgba(30,107,102,0.2); color: var(--teal); }
+  .what-tag.ai:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+
   /* PROCESS */
   .process { background: var(--dark); color: #fff; }
 
@@ -466,7 +551,6 @@
     font-weight: 500;
     color: rgba(255,255,255,0.85);
     margin-bottom: 0.6rem;
-    letter-spacing: 0.02em;
   }
 
   .step-desc {
@@ -532,11 +616,7 @@
 
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
+  .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
 
   .form-field label {
     font-size: 0.68rem;
@@ -585,7 +665,6 @@
 
   .form-submit:hover { background: var(--olive); transform: translateY(-2px); }
 
-  /* FOOTER */
   footer {
     background: var(--dark);
     padding: 2.5rem 4rem;
@@ -594,11 +673,7 @@
     justify-content: space-between;
   }
 
-  footer img {
-    height: 28px;
-    mix-blend-mode: screen;
-    opacity: 0.35;
-  }
+  footer svg { height: 28px; opacity: 0.35; }
 
   .footer-copy {
     font-size: 0.72rem;
@@ -615,114 +690,38 @@
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
     .services-header { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
+    .who-grid { grid-template-columns: 1fr; gap: 3rem; }
     .process-steps { grid-template-columns: 1fr 1fr; }
     .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
     .divider { margin: 0 1.5rem; }
   }
-
-  /* WHO WE WORK WITH */
-  .who { background: #fff; }
-
-  .who-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: end;
-    margin-bottom: 3.5rem;
-  }
-
-  .who-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
-    margin-bottom: 4rem;
-  }
-
-  .who-card {
-    padding: 1.8rem;
-    background: var(--cream);
-    border-radius: 14px;
-    border: 1px solid var(--cream-dark);
-    transition: transform 0.3s, border-color 0.3s;
-  }
-
-  .who-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--olive-pale);
-  }
-
-  .who-card-label {
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--olive);
-    margin-bottom: 0.8rem;
-  }
-
-  .who-card-desc {
-    font-size: 0.85rem;
-    color: var(--stone);
-    font-weight: 300;
-    line-height: 1.75;
-  }
-
-  .what-we-build {
-    padding-top: 3rem;
-    border-top: 1px solid var(--cream-dark);
-  }
-
-  .build-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-  }
-
-  .build-tag {
-    font-size: 0.82rem;
-    font-weight: 400;
-    color: var(--dark);
-    padding: 0.5rem 1.1rem;
-    border-radius: 2rem;
-    border: 1.5px solid var(--cream-dark);
-    background: var(--cream);
-    transition: all 0.2s;
-    cursor: default;
-    letter-spacing: 0.02em;
-  }
-
-  .build-tag:hover {
-    border-color: var(--teal);
-    color: var(--teal);
-    background: var(--teal-pale);
-  }
-
-  @media (max-width: 900px) {
-    .who-header { grid-template-columns: 1fr; }
-    .who-grid { grid-template-columns: 1fr 1fr; }
-  }
-
 </style>
 </head>
 <body>
 
+<!-- SVG LOGO DEFINITION - redrawn from your logo mark -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="seeclear-logo" viewBox="0 0 220 80">
+    <!-- Lens / eye mark -->
+    <line x1="8" y1="28" x2="72" y2="28" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="148" y1="28" x2="212" y2="28" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M72 28 Q110 2 148 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M72 28 Q110 54 148 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Wordmark -->
+    <text x="110" y="72" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="16" font-weight="500" letter-spacing="6" fill="currentColor">SEECLEAR</text>
+    <text x="110" y="84" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="9" font-weight="300" letter-spacing="5" fill="currentColor">STUDIO</text>
+  </symbol>
+</svg>
+
 <nav>
   <div class="nav-logo">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" height="38" aria-label="SeeClear Studio">
-  <!-- horizontal line with lens -->
-  <line x1="0" y1="18" x2="220" y2="18" stroke="#1a1814" stroke-width="2"/>
-  <path d="M60,18 Q110,-4 160,18 Q110,40 60,18 Z" fill="none" stroke="#1a1814" stroke-width="1.8"/>
-  <!-- SEECLEAR -->
-  <text x="110" y="50" font-family="'DM Sans',sans-serif" font-size="17" font-weight="500" fill="#1a1814" text-anchor="middle" letter-spacing="5">SEECLEAR</text>
-  <!-- STUDIO -->
-  <text x="110" y="66" font-family="'DM Sans',sans-serif" font-size="8.5" font-weight="400" fill="#1a1814" text-anchor="middle" letter-spacing="5">STUDIO</text>
-</svg>
+    <svg color="var(--dark)" style="height:48px;width:auto"><use href="#seeclear-logo"/></svg>
   </div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="#who">Who we work with</a></li>
     <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
   </ul>
 </nav>
@@ -730,8 +729,8 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <h1>Your <em>digital</em> teams,<br>supercharged with<br>the right talent</h1>
-      <p class="hero-sub">SeeClear Studio embeds senior designers, engineers, and AI-native talent directly into your product team — giving you the capability to move faster, build smarter, and ship with confidence.</p>
+      <h1>Your digital teams,<br><em>supercharged</em><br>with the right talent</h1>
+      <p class="hero-sub">SeeClear Studio embeds senior designers, engineers, and AI-native talent directly into your digital teams — giving you the capability to move faster, build smarter, and ship with confidence.</p>
       <div class="hero-actions">
         <a href="#services" class="btn-primary">How we help</a>
         <a href="#contact" class="btn-ghost">Talk to us</a>
@@ -748,7 +747,7 @@
       <div class="hero-card">
         <div class="card-dot teal"></div>
         <div class="card-text">
-          <strong>AI-Led Product Development</strong>
+          <strong>AI-Led Development</strong>
           <span>Engineers who build with AI at the core, not as an afterthought</span>
         </div>
       </div>
@@ -770,25 +769,12 @@
     <div class="about-grid">
       <div>
         <div class="about-blob">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" width="72%" aria-label="SeeClear Studio">
-  <line x1="0" y1="18" x2="220" y2="18" stroke="#1a1814" stroke-width="2"/>
-  <path d="M60,18 Q110,-4 160,18 Q110,40 60,18 Z" fill="none" stroke="#1a1814" stroke-width="1.8"/>
-  <text x="110" y="50" font-family="'DM Sans',sans-serif" font-size="17" font-weight="500" fill="#1a1814" text-anchor="middle" letter-spacing="5">SEECLEAR</text>
-  <text x="110" y="66" font-family="'DM Sans',sans-serif" font-size="8.5" font-weight="400" fill="#1a1814" text-anchor="middle" letter-spacing="5">STUDIO</text>
-</svg>
+          <svg color="var(--dark)" style="opacity:0.55"><use href="#seeclear-logo"/></svg>
         </div>
         <div class="about-stats">
           <div class="about-stat">
-            <div class="about-stat-num">50+</div>
-            <div class="about-stat-label">Products shipped</div>
-          </div>
-          <div class="about-stat">
             <div class="about-stat-num">100%</div>
             <div class="about-stat-label">On-time delivery</div>
-          </div>
-          <div class="about-stat">
-            <div class="about-stat-num">12+</div>
-            <div class="about-stat-label">Countries served</div>
           </div>
           <div class="about-stat">
             <div class="about-stat-num">AI</div>
@@ -798,9 +784,9 @@
       </div>
       <div>
         <div class="section-label">Who we are</div>
-        <h2 class="section-title">We power the teams building <em>what's next</em></h2>
-        <p class="section-sub">SeeClear Studio is a specialist talent and product studio. We work with ambitious companies to embed the right people — designers, engineers, and AI practitioners — directly into their teams.</p>
-        <p class="section-sub" style="margin-top: 1.2rem;">We don't pitch and disappear. We show up as part of your team, understand your culture, and deliver like insiders. Our talent is AI-native by default — we bring modern workflows, tooling, and capability that accelerates everything your team does.</p>
+        <h2 class="section-title">We power the digital teams building <em>what's next</em></h2>
+        <p class="section-sub">SeeClear Studio is a specialist talent and product studio. We embed senior designers, engineers, and AI practitioners directly into your team — operating like insiders from day one.</p>
+        <p class="section-sub" style="margin-top: 1.2rem;">Our talent is AI-native by default. We bring modern workflows, AI tooling, and the kind of capability that makes everything your digital team does move faster and land better.</p>
         <a href="#contact" class="btn-primary" style="margin-top: 2.5rem; display: inline-block;">Work with us</a>
       </div>
     </div>
@@ -814,7 +800,7 @@
     <div class="services-header">
       <div>
         <div class="section-label">What we do</div>
-        <h2 class="section-title">The capability your team <em>needs</em></h2>
+        <h2 class="section-title">The capability your digital team <em>needs</em></h2>
       </div>
       <p class="section-sub">From embedded engineers to full product squads — we plug in where you need us most.</p>
     </div>
@@ -822,7 +808,7 @@
       <div class="service-card">
         <div class="service-num">01</div>
         <h3 class="service-title">Staff Augmentation</h3>
-        <p class="service-desc">Embed senior designers and engineers directly into your team. We integrate with your workflow, your stack, and your pace — and operate like insiders from day one. Scale up or down as your needs change.</p>
+        <p class="service-desc">Embed senior designers and engineers directly into your digital team. We integrate with your workflow, your stack, and your pace — operating like insiders from day one. Scale up or down as your needs change.</p>
         <div class="service-tags">
           <span class="tag olive">Embedded Teams</span>
           <span class="tag olive">Senior Talent</span>
@@ -833,7 +819,7 @@
       <div class="service-card">
         <div class="service-num">02</div>
         <h3 class="service-title">AI-Led Product Development</h3>
-        <p class="service-desc">We build with AI at the core. From integrating LLMs and automation into your product to deploying internal AI tools that make your team 10x faster — we help you move from AI curiosity to AI capability.</p>
+        <p class="service-desc">We build with AI at the core. From integrating LLMs and deploying automation into your product, to building internal AI tools that make your team dramatically faster — we help you move from AI curiosity to real AI capability.</p>
         <div class="service-tags">
           <span class="tag teal">LLM Integration</span>
           <span class="tag teal">AI Tooling</span>
@@ -844,12 +830,93 @@
       <div class="service-card">
         <div class="service-num">03</div>
         <h3 class="service-title">Product Design</h3>
-        <p class="service-desc">UX research, interface design, and design systems that make complex products feel intuitive. We embed with your product team and ship work that's ready to build — not just pretty to look at.</p>
+        <p class="service-desc">UX research, interface design, and design systems that make complex digital products feel intuitive. We embed with your team and ship work that's ready to build — not just pretty to look at.</p>
         <div class="service-tags">
           <span class="tag blush">UX Research</span>
           <span class="tag blush">UI Design</span>
           <span class="tag blush">Design Systems</span>
           <span class="tag blush">Prototyping</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHO WE WORK WITH -->
+<section class="who" id="who">
+  <div class="section-inner">
+    <div class="section-label">Who we work with</div>
+    <h2 class="section-title">Built for teams at <em>every stage</em></h2>
+    <p class="section-sub">From solo founders to enterprise product orgs — we've worked with them all, and we know what each stage actually needs.</p>
+
+    <div class="who-grid">
+      <div>
+        <div class="who-col-title">The teams we embed with</div>
+        <div class="who-items">
+          <div class="who-item">
+            <div class="who-item-icon olive">🏢</div>
+            <div class="who-item-text">
+              <strong>Enterprises</strong>
+              <span>Large product orgs that need to move faster without rebuilding their team. We plug in, integrate, and deliver.</span>
+            </div>
+          </div>
+          <div class="who-item">
+            <div class="who-item-icon teal">🚀</div>
+            <div class="who-item-text">
+              <strong>Startups & Scale-ups</strong>
+              <span>Companies past product-market fit, scaling their team and shipping at speed. We bring the senior talent they need without the long hiring cycles.</span>
+            </div>
+          </div>
+          <div class="who-item">
+            <div class="who-item-icon blush">💡</div>
+            <div class="who-item-text">
+              <strong>Solo Founders</strong>
+              <span>Founders with a vision and no team yet. We help you go from idea to working product — and build the team around it as you grow.</span>
+            </div>
+          </div>
+          <div class="who-item">
+            <div class="who-item-icon olive">🤖</div>
+            <div class="who-item-text">
+              <strong>AI-Native Companies</strong>
+              <span>Teams building with AI at the core who need engineers and designers who speak the same language — and can ship at the pace AI demands.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="who-col-title">What we build & deploy</div>
+        <div class="what-tags-group">
+          <div>
+            <div class="what-group-label">AI & Automation</div>
+            <div class="what-tags">
+              <span class="what-tag ai">LLM Integrations</span>
+              <span class="what-tag ai">AI Agents</span>
+              <span class="what-tag ai">Agentic Workflows</span>
+              <span class="what-tag ai">RAG Pipelines</span>
+              <span class="what-tag ai">AI-Powered Features</span>
+              <span class="what-tag ai">Copilot Tools</span>
+              <span class="what-tag ai">Data Pipelines</span>
+              <span class="what-tag ai">Automation Suites</span>
+            </div>
+          </div>
+          <div>
+            <div class="what-group-label">Products & Platforms</div>
+            <div class="what-tags">
+              <span class="what-tag">Web Applications</span>
+              <span class="what-tag">Mobile Apps</span>
+              <span class="what-tag">Internal Tools</span>
+              <span class="what-tag">Data Dashboards</span>
+              <span class="what-tag">Developer Platforms</span>
+              <span class="what-tag">SaaS Products</span>
+              <span class="what-tag">E-Commerce</span>
+              <span class="what-tag">Websites</span>
+              <span class="what-tag">APIs & Integrations</span>
+              <span class="what-tag">Design Systems</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -885,66 +952,14 @@
   </div>
 </section>
 
-<div class="divider"></div>
-
-<section class="who" id="who">
-  <div class="section-inner">
-    <div class="who-header">
-      <div>
-        <div class="section-label">Who we work with</div>
-        <h2 class="section-title">Built for teams at <em>every stage</em></h2>
-      </div>
-      <p class="section-sub">From solo founders to enterprise product orgs — we adapt to where you are and what you need.</p>
-    </div>
-    <div class="who-grid">
-      <div class="who-card">
-        <div class="who-card-label">Enterprises</div>
-        <p class="who-card-desc">Large product orgs needing to move faster. We embed senior talent to accelerate delivery, modernise legacy systems, and bring AI capability into established teams.</p>
-      </div>
-      <div class="who-card">
-        <div class="who-card-label">Scale-ups</div>
-        <p class="who-card-desc">Growing teams that need to scale without the overhead. We extend your core team with design and engineering muscle exactly when your roadmap demands it.</p>
-      </div>
-      <div class="who-card">
-        <div class="who-card-label">Startups</div>
-        <p class="who-card-desc">Early-stage teams building fast. We bring the senior experience to help you make the right product decisions early — and ship without slowing down.</p>
-      </div>
-      <div class="who-card">
-        <div class="who-card-label">Solo Founders</div>
-        <p class="who-card-desc">You have the vision. We become your technical co-pilot — designing, building, and shipping your product from zero, so you can stay focused on the business.</p>
-      </div>
-    </div>
-    <div class="what-we-build">
-      <div class="section-label" style="margin-bottom: 2rem;">What we build & integrate</div>
-      <div class="build-tags">
-        <span class="build-tag">AI Integrations</span>
-        <span class="build-tag">LLM-Powered Products</span>
-        <span class="build-tag">Agentic Workflows</span>
-        <span class="build-tag">Internal AI Tools</span>
-        <span class="build-tag">Data Platforms</span>
-        <span class="build-tag">Web Applications</span>
-        <span class="build-tag">Mobile Apps</span>
-        <span class="build-tag">SaaS Products</span>
-        <span class="build-tag">Internal Services</span>
-        <span class="build-tag">Websites</span>
-        <span class="build-tag">API Integrations</span>
-        <span class="build-tag">Automation Pipelines</span>
-        <span class="build-tag">Design Systems</span>
-        <span class="build-tag">E-Commerce</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="contact" id="contact">
   <div class="section-inner">
     <div class="contact-inner">
       <div>
         <div class="section-label">Let's work together</div>
-        <h2 class="contact-title">Tell us what your team <em>needs</em></h2>
-        <p class="contact-sub">Whether you need one senior engineer or an entire product squad — we'll get back to you within 24 hours with honest thoughts on how we can help.</p>
-        <a href="mailto:siddharth@seeclearstudio.com" class="contact-email-link">siddharth@seeclearstudio.com →</a>
+        <h2 class="contact-title">Tell us what your digital team <em>needs</em></h2>
+        <p class="contact-sub">Whether you need one senior engineer or an entire product squad — we'll get back to you quickly with honest thoughts on how we can help.</p>
+        <a href="/cdn-cgi/l/email-protection#8bf8e2efefe3eaf9ffe3cbf8eeeee8e7eeeaf9f8fffeefe2e4a5e8e4e6" class="contact-email-link"><span class="__cf_email__" data-cfemail="dba8b2bfbfb3baa9afb39ba8bebeb8b7bebaa9a8afaebfb2b4f5b8b4b6">[email&#160;protected]</span> →</a>
       </div>
       <form class="contact-form" onsubmit="handleSubmit(event)">
         <div class="form-row">
@@ -968,23 +983,8 @@
 </section>
 
 <footer>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" height="30" aria-label="SeeClear Studio">
-  <line x1="0" y1="18" x2="220" y2="18" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
-  <path d="M60,18 Q110,-4 160,18 Q110,40 60,18 Z" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.8"/>
-  <text x="110" y="50" font-family="'DM Sans',sans-serif" font-size="17" font-weight="500" fill="rgba(255,255,255,0.35)" text-anchor="middle" letter-spacing="5">SEECLEAR</text>
-  <text x="110" y="66" font-family="'DM Sans',sans-serif" font-size="8.5" font-weight="400" fill="rgba(255,255,255,0.35)" text-anchor="middle" letter-spacing="5">STUDIO</text>
-</svg>
+  <svg color="rgba(255,255,255,0.5)" style="height:40px;width:auto"><use href="#seeclear-logo"/></svg>
   <div class="footer-copy">© 2026 SeeClear Studio. All rights reserved.</div>
 </footer>
 
-<script>
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  btn.textContent = "Sent. We'll be in touch soon.";
-  btn.style.background = '#1e6b66';
-  btn.disabled = true;
-}
-</script>
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
